@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -6,6 +7,13 @@
         android:id="@+id/menu_windows"
         android:title="@string/menu_windows"
         app:showAsAction="never" />
+
+    <item android:id="@+id/act_refresh"
+        android:icon="@drawable/ic_refresh"
+        android:title="@string/act_refresh"
+        android:alphabeticShortcut="r"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/menu_website"
         android:title="@string/menu_website"

@@ -16,4 +16,12 @@
     <string name="menu_windows">Building windows</string>
     <string name="menu_website">Our website</string>
     <string name="menu_email">Send us an email</string>
+    <string name="act_change_window_status">Switch</string>
+    <string name="act_refresh">Refresh</string>
+
+    <!--Strings used in the dashboard-->
+    <string name="tab_building">Buildings</string>
+    <string name="tab_windows">Windows</string>
+    <string name="tab_rooms">Rooms</string>
+    <string name="tab_heaters">Heaters</string>
 </resources>

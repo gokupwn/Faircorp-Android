@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.faircorp.model.ApiServices
 import com.faircorp.model.WindowAdapter
-import com.faircorp.services.WindowService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -30,15 +29,15 @@ class WindowsActivity : BasicActivity(), OnWindowSelectedListener{
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
 
-        lifecycleScope.launch(context = Dispatchers.IO) { // (1)
-            runCatching { ApiServices().windowsApiService.findAll().execute() } // (2)
+        lifecycleScope.launch(context = Dispatchers.IO) {
+            runCatching { ApiServices().windowsApiService.findAll().execute() }
                 .onSuccess {
-                    withContext(context = Dispatchers.Main) { // (3)
+                    withContext(context = Dispatchers.Main) {
                         adapter.update(it.body() ?: emptyList())
                     }
                 }
                 .onFailure {
-                    withContext(context = Dispatchers.Main) { // (3)
+                    withContext(context = Dispatchers.Main) {
                         Toast.makeText(
                             applicationContext,
                             "Error on windows loading $it",
@@ -52,5 +51,4 @@ class WindowsActivity : BasicActivity(), OnWindowSelectedListener{
         val intent = Intent(this, WindowActivity::class.java).putExtra(WINDOW_NAME_PARAM, id)
         startActivity(intent)
     }
-
 }

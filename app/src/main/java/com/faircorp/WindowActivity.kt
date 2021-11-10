@@ -1,29 +1,28 @@
 package com.faircorp
 
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.faircorp.model.ApiServices
-import com.faircorp.model.WindowDto
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import retrofit2.Call
+
 
 const val WINDOW_NAME_PARAM = "com.faircorp.windowname.attribute"
 
 class WindowActivity : BasicActivity() {
+
+
+    var id: Long = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_window)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-
-        val id = intent.getLongExtra(WINDOW_NAME_PARAM, 0)
-        val window: Call<WindowDto> = ApiServices().windowsApiService.findById(id)
-
-
+        id = intent.getLongExtra(WINDOW_NAME_PARAM, 0)
 
         lifecycleScope.launch(context = Dispatchers.IO) {
             runCatching { ApiServices().windowsApiService.findById(id).execute() }
@@ -31,13 +30,18 @@ class WindowActivity : BasicActivity() {
                     withContext(context = Dispatchers.Main) {
                         findViewById<TextView>(R.id.txt_window_name).text = it.body()?.name
                         findViewById<TextView>(R.id.txt_room_name).text = it.body()?.roomName
-                        findViewById<TextView>(R.id.txt_window_status).text = it.body()?.windowStatus.toString()
+                        findViewById<TextView>(R.id.txt_window_status).text =
+                            it.body()?.windowStatus.toString()
                         lifecycleScope.launch(context = Dispatchers.IO) {
-                            runCatching { ApiServices().roomApiService.findById(it.body()?.roomId).execute() }
+                            runCatching {
+                                ApiServices().roomApiService.findById(it.body()?.roomId).execute()
+                            }
                                 .onSuccess {
                                     withContext(context = Dispatchers.Main) {
-                                        findViewById<TextView>(R.id.txt_window_current_temperature).text = it.body()?.currentTemperature?.toString()
-                                        findViewById<TextView>(R.id.txt_window_target_temperature).text = it.body()?.targetTemperature?.toString()
+                                        findViewById<TextView>(R.id.txt_window_current_temperature).text =
+                                            it.body()?.currentTemperature?.toString()
+                                        findViewById<TextView>(R.id.txt_window_target_temperature).text =
+                                            it.body()?.targetTemperature?.toString()
                                     }
                                 }
                                 .onFailure {
@@ -63,21 +67,13 @@ class WindowActivity : BasicActivity() {
                 }
 
         }
+    }
 
-
-
-
-
-
-
-
-//        if (window != null) {
-//            findViewById<TextView>(R.id.txt_window_name).text = window.name
-//            findViewById<TextView>(R.id.txt_room_name).text = window.roomName
-////            findViewById<TextView>(R.id.txt_window_current_temperature).text = window.currentTemperature?.toString()
-////            findViewById<TextView>(R.id.txt_window_target_temperature).text = window.targetTemperature?.toString()
-//            findViewById<TextView>(R.id.txt_window_status).text = window.windowStatus.toString()
-//        }
-//        }
+    fun switchStatus(view: View) {
+        lifecycleScope.launch(context = Dispatchers.IO) {
+            runCatching { ApiServices().windowsApiService.switchStatus(id).execute() }
+//            finish()
+//            startActivity(intent)
+        }
     }
 }

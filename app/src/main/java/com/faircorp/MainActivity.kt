@@ -9,7 +9,7 @@ import android.widget.EditText
 class MainActivity : BasicActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_dashboard)
     }
     /** Called when the user taps the button */
     fun openWindow(view: View) {

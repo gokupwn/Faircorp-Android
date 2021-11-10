@@ -5,6 +5,7 @@ import android.net.Uri
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 open class BasicActivity : AppCompatActivity(){
@@ -24,8 +25,15 @@ open class BasicActivity : AppCompatActivity(){
             R.id.menu_email -> startActivity(
                 Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:hassanalachek@hotmail.com"))
             )
+            R.id.act_refresh -> refresh()
 
         }
         return super.onContextItemSelected(item)
+    }
+
+    private fun refresh() {
+        Toast.makeText(this, "Refresh ...", Toast.LENGTH_SHORT).show()
+        finish()
+        startActivity(intent)
     }
 }

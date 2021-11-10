@@ -12,6 +12,12 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <!-- Apply the menu new theme-->
+        <item name="android:actionOverflowButtonStyle">@style/MyMenuTheme</item>
+    </style>
 
+    <!-- A custom theme for the menu icon -->
+    <style name="MyMenuTheme" parent="android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_baseline_menu_open_24</item>
     </style>
 </resources>
