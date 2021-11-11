@@ -3,7 +3,6 @@
     <string name="app_logo_description">Faircorp logo</string>
 
     <string name="act_main_windowname_hint">Window name</string>
-    <string name="act_main_welcome">Welcome on faircorp,\n the app to manage building windows</string>
     <string name="act_main_open_window">Open window</string>
 
     <string name="act_window_name">Window name</string>
@@ -24,4 +23,5 @@
     <string name="tab_windows">Windows</string>
     <string name="tab_rooms">Rooms</string>
     <string name="tab_heaters">Heaters</string>
+    <string name="act_main_welcome">Welcome on faircorp,\n the app to manage building windows</string>
 </resources>

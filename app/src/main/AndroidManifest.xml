@@ -3,18 +3,24 @@
     package="com.faircorp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
-        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Faircorp">
-
+        android:theme="@style/Theme.Faircorp"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".RoomsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RoomActivity"
+            android:parentActivityName=".RoomsActivity" />
         <activity
             android:name=".WindowsActivity"
-            android:parentActivityName=".MainActivity"  />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".WindowActivity"
             android:parentActivityName=".WindowActivity" />
@@ -31,8 +37,6 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
-
     </application>
 
 </manifest>
