@@ -13,6 +13,9 @@ interface WindowApiService {
     @GET("windows/{id}")
     fun findById(@Path("id") id: Long): Call<WindowDto>
 
+    @GET("windows/rooms/{roomId}")
+    fun findWindowsByRoomId(@Path("roomId") roomId: Long?): Call<List<WindowDto>>
+
     @PUT("windows/{id}/switch")
     fun switchStatus(@Path("id") id: Long): Call<WindowDto>
 }
