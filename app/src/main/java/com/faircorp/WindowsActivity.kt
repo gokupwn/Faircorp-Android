@@ -3,6 +3,7 @@ package com.faircorp
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -20,6 +21,8 @@ class WindowsActivity : BasicActivity(), OnWindowSelectedListener{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_windows)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
 
         val recyclerView = findViewById<RecyclerView>(R.id.list_windows)
         val adapter = WindowAdapter(this)

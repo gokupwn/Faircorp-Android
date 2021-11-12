@@ -1,5 +1,6 @@
 package com.faircorp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
@@ -14,7 +15,7 @@ import kotlinx.coroutines.withContext
 
 const val ROOM_NAME_PARAM = "com.faircorp.roomName.attribute"
 
-class RoomActivity : BasicActivity() {
+class RoomActivity : BasicActivity(), OnWindowRoomSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +25,7 @@ class RoomActivity : BasicActivity() {
         val id = intent.getStringExtra(ROOM_NAME_PARAM)?.toLong()
 
         val recyclerView = findViewById<RecyclerView>(R.id.list_room_windows)
-        val adapter = RoomWindowsAdapter()
+        val adapter = RoomWindowsAdapter(this)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
@@ -48,5 +49,10 @@ class RoomActivity : BasicActivity() {
                     }
                 }
         }
+    }
+
+    override fun onWindowRoomSelected(id: Long) {
+        val intent = Intent(this, WindowActivity::class.java).putExtra(WINDOW_NAME_PARAM, id)
+        startActivity(intent)
     }
 }

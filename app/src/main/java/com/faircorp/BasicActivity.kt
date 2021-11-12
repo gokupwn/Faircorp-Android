@@ -34,6 +34,9 @@ open class BasicActivity : AppCompatActivity(){
     private fun refresh() {
         Toast.makeText(this, "Refresh ...", Toast.LENGTH_SHORT).show()
         finish()
+        /* Disable blink effect after refresh */
+        overridePendingTransition(0, 0)
         startActivity(intent)
+        overridePendingTransition(0, 0)
     }
 }
