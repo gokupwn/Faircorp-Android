@@ -32,15 +32,15 @@ class RoomsActivity : BasicActivity(), OnRoomSelectedListener {
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
 
-        lifecycleScope.launch(context = Dispatchers.IO) { // (1)
-            runCatching { ApiServices().roomApiService.findAll().execute() } // (2)
+        lifecycleScope.launch(context = Dispatchers.IO) {
+            runCatching { ApiServices().roomApiService.findAll().execute() }
                 .onSuccess {
-                    withContext(context = Dispatchers.Main) { // (3)
+                    withContext(context = Dispatchers.Main) {
                         adapter.update(it.body() ?: emptyList())
                     }
                 }
                 .onFailure {
-                    withContext(context = Dispatchers.Main) { // (3)
+                    withContext(context = Dispatchers.Main) {
                         Toast.makeText(
                             applicationContext,
                             "Error on windows loading $it",
@@ -57,6 +57,6 @@ class RoomsActivity : BasicActivity(), OnRoomSelectedListener {
         val intent = Intent(this, RoomActivity::class.java).apply {
             putExtra(ROOM_NAME_PARAM, id.toString())
         }
-            startActivity(intent)
+        startActivity(intent)
     }
 }

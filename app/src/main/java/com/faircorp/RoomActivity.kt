@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.faircorp.model.ApiServices
 import com.faircorp.model.RoomWindowsAdapter
-import com.faircorp.services.WindowService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -16,8 +15,6 @@ import kotlinx.coroutines.withContext
 const val ROOM_NAME_PARAM = "com.faircorp.roomName.attribute"
 
 class RoomActivity : BasicActivity() {
-
-    val windowService = WindowService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,15 +31,15 @@ class RoomActivity : BasicActivity() {
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
 
-        lifecycleScope.launch(context = Dispatchers.IO) { // (1)
-            runCatching { ApiServices().windowsApiService.findWindowsByRoomId(id).execute() } // (2)
+        lifecycleScope.launch(context = Dispatchers.IO) {
+            runCatching { ApiServices().windowsApiService.findWindowsByRoomId(id).execute() }
                 .onSuccess {
-                    withContext(context = Dispatchers.Main) { // (3)
+                    withContext(context = Dispatchers.Main) {
                         adapter.update(it.body() ?: emptyList())
                     }
                 }
                 .onFailure {
-                    withContext(context = Dispatchers.Main) { // (3)
+                    withContext(context = Dispatchers.Main) {
                         Toast.makeText(
                             applicationContext,
                             "Error on windows loading $it",
