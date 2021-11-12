@@ -9,7 +9,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.faircorp.OnRoomSelectedListener
 import com.faircorp.R
 
-
+// ┌────────────────┐        ┌────────────────┐         ┌────────────────┐
+// │                │        │                │         │                │
+// │Rooms Activity  ├────────┤  Rooms Adapter ├─────────┤Room Activity   │
+// │                │        │                │         │                │
+// │                │        │      View      │         │                │
+// └────────────────┘        └────────────────┘         └────────────────┘
+//
+// ┌────────────────┐                                   ┌───────────────┐
+// │                │                                   │Window 1 in R1 │
+// │   Room 1  (R1) ├──────────────────────────────────►│               │
+// ├────────────────┤                                   ├───────────────┤
+// │                │                                   │               │
+// │   Room 2 (R2)  │                                   │Window 2 in R2 │
+// ├────────────────┤                                   └───────────────┘
+// │                │
+// │                │
+// └────────────────┘
 
 class RoomAdapter(private val listener: OnRoomSelectedListener): RecyclerView.Adapter<RoomAdapter.RoomViewHolder>() {
     inner class RoomViewHolder(view: View) : RecyclerView.ViewHolder(view) {
