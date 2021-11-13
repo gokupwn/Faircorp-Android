@@ -1,5 +1,6 @@
-package com.faircorp.model
+package com.faircorp.apiservices
 
+import com.faircorp.model.RoomDto
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

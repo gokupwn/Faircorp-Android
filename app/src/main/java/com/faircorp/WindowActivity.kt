@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
-import com.faircorp.model.ApiServices
+import com.faircorp.apiservices.ApiServices
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

@@ -7,7 +7,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.faircorp.model.ApiServices
+import com.faircorp.apiservices.ApiServices
 import com.faircorp.model.RoomWindowsAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
