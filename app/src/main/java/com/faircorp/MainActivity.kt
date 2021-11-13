@@ -52,7 +52,7 @@ class MainActivity : BasicActivity(), OnClickListener {
             )
 
             R.id.heaters -> startActivity(
-                Intent(this, WindowsActivity::class.java)
+                Intent(this, HeaterActivity::class.java)
             )
         }
 

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Faircorp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".HeaterActivity"
+            android:exported="false" />
+        <activity
             android:name=".RoomsActivity"
             android:parentActivityName=".MainActivity" />
         <activity
