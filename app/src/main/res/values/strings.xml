@@ -24,4 +24,10 @@
     <string name="tab_rooms">Rooms</string>
     <string name="tab_heaters">Heaters</string>
     <string name="act_main_welcome">Welcome on faircorp,\n the app to manage building windows</string>
+
+    <!--Strings used in activity heater-->
+    <string name="act_heater_name">Heater name</string>
+    <string name="act_heater_room">Room</string>
+    <string name="act_heater_power">Power</string>
+    <string name="act_heater_status">Status</string>
 </resources>

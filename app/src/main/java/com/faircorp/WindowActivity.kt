@@ -30,7 +30,7 @@ class WindowActivity : BasicActivity() {
                     withContext(context = Dispatchers.Main) {
                         findViewById<TextView>(R.id.txt_window_name).text = it.body()?.name
                         findViewById<TextView>(R.id.txt_room_name).text = it.body()?.roomName
-                        findViewById<TextView>(R.id.txt_window_status).text =
+                        findViewById<TextView>(R.id.txt_heater_status).text =
                             it.body()?.windowStatus.toString()
                         lifecycleScope.launch(context = Dispatchers.IO) {
                             runCatching {
@@ -38,7 +38,7 @@ class WindowActivity : BasicActivity() {
                             }
                                 .onSuccess {
                                     withContext(context = Dispatchers.Main) {
-                                        findViewById<TextView>(R.id.txt_window_current_temperature).text =
+                                        findViewById<TextView>(R.id.txt_heater_power).text =
                                             it.body()?.currentTemperature?.toString()
                                         findViewById<TextView>(R.id.txt_window_target_temperature).text =
                                             it.body()?.targetTemperature?.toString()
@@ -60,7 +60,7 @@ class WindowActivity : BasicActivity() {
                     withContext(context = Dispatchers.Main) {
                         Toast.makeText(
                             applicationContext,
-                            "Error on windows loading $it",
+                            "Error on window loading $it",
                             Toast.LENGTH_LONG
                         ).show()
                     }

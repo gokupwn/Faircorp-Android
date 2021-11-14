@@ -53,7 +53,7 @@
         android:text="@string/act_window_room_target_temp"
         android:textColor="@color/red"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_window_current_temperature" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_heater_power" />
 
     <TextView
         android:id="@+id/textView13"
@@ -92,7 +92,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
-        android:id="@+id/txt_window_current_temperature"
+        android:id="@+id/txt_heater_power"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -116,7 +116,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
-        android:id="@+id/txt_window_status"
+        android:id="@+id/txt_heater_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

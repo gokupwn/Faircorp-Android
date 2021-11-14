@@ -52,7 +52,7 @@ class MainActivity : BasicActivity(), OnClickListener {
             )
 
             R.id.heaters -> startActivity(
-                Intent(this, HeaterActivity::class.java)
+                Intent(this, HeatersActivity::class.java)
             )
         }
 

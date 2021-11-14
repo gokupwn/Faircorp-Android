@@ -13,8 +13,14 @@
         android:theme="@style/Theme.Faircorp"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".HeaterActivity"
+            android:name=".BuildingActivity"
             android:exported="false" />
+        <activity
+            android:name=".HeatersActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".HeaterActivity"
+            android:parentActivityName=".HeatersActivity" />
         <activity
             android:name=".RoomsActivity"
             android:parentActivityName=".MainActivity" />
