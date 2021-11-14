@@ -22,7 +22,6 @@ class WindowsActivity : BasicActivity(), OnWindowSelectedListener{
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
-
         val recyclerView = findViewById<RecyclerView>(R.id.list_windows)
         val adapter = WindowAdapter(this)
 
@@ -49,6 +48,7 @@ class WindowsActivity : BasicActivity(), OnWindowSelectedListener{
                 }
         }
     }
+
     override fun onWindowSelected(id: Long) {
         val intent = Intent(this, WindowActivity::class.java).putExtra(WINDOW_NAME_PARAM, id)
         startActivity(intent)

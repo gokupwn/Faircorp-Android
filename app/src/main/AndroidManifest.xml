@@ -14,10 +14,10 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".BuildingsActivity"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".BuildingActivity"
-            android:exported="false" />
+            android:parentActivityName=".BuildingsActivity" />
         <activity
             android:name=".HeatersActivity"
             android:parentActivityName=".MainActivity" />

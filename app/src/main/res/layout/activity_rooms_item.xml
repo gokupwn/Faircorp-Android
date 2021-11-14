@@ -62,10 +62,6 @@
                 android:fontFamily="@font/aclonica"
                 android:text="Target Temperature"
                 android:textSize="16sp" />
-
-
-
-
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

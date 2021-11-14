@@ -42,7 +42,7 @@ class RoomsActivity : BasicActivity(), OnRoomSelectedListener {
                     withContext(context = Dispatchers.Main) {
                         Toast.makeText(
                             applicationContext,
-                            "Error on windows loading $it",
+                            "Error on Rooms loading $it",
                             Toast.LENGTH_LONG
                         ).show()
                     }

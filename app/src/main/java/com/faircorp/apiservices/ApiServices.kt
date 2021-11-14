@@ -28,4 +28,12 @@ class ApiServices {
             .build()
             .create(HeaterApiService::class.java)
     }
+
+    val buildingApiService: BuildingApiService by lazy {
+        Retrofit.Builder()
+            .addConverterFactory(MoshiConverterFactory.create())
+            .baseUrl("$baseUrl/api/")
+            .build()
+            .create(BuildingApiService::class.java)
+    }
 }
