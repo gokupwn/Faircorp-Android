@@ -16,8 +16,6 @@ import kotlinx.coroutines.withContext
 
 class RoomsActivity : BasicActivity(), OnRoomSelectedListener {
 
-    private val roomService = RoomService()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rooms)

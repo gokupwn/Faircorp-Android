@@ -48,7 +48,7 @@ class WindowActivity : BasicActivity() {
                                     withContext(context = Dispatchers.Main) {
                                         Toast.makeText(
                                             applicationContext,
-                                            "Error on windows loading $it",
+                                            "Error on Temperatures loading $it",
                                             Toast.LENGTH_LONG
                                         ).show()
                                     }

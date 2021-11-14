@@ -7,6 +7,7 @@
         <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/drawable/ic_logo.xml" value="0.2101851851851852" />
         <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/drawable/ic_refresh.xml" value="0.2222222222222222" />
         <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/layout/activity_building.xml" value="0.25416666666666665" />
+        <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/layout/activity_building_rooms_item.xml" value="0.25317028985507245" />
         <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/layout/activity_buildings.xml" value="0.25317028985507245" />
         <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/layout/activity_buildings_item.xml" value="0.25317028985507245" />
         <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/layout/activity_dashboard.xml" value="0.264" />
@@ -15,7 +16,7 @@
         <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/layout/activity_heaters_item.xml" value="0.3402777777777778" />
         <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/layout/activity_main.xml" value="0.23867753623188406" />
         <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/layout/activity_room.xml" value="0.25181159420289856" />
-        <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/layout/activity_room_windows_item.xml" value="0.25181159420289856" />
+        <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/layout/activity_room_windows_item.xml" value="0.2" />
         <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/layout/activity_rooms.xml" value="0.4" />
         <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/layout/activity_rooms_item.xml" value="0.373015873015873" />
         <entry key="..\:/1-Mines-St-Etienne/Java/Faircorp-Android/app/src/main/res/layout/activity_window.xml" value="0.4" />

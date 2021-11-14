@@ -22,7 +22,7 @@ class RoomActivity : BasicActivity(), OnWindowRoomSelectedListener {
         setContentView(R.layout.activity_room)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val id = intent.getStringExtra(ROOM_NAME_PARAM)?.toLong()
+        val id = intent.getLongExtra(ROOM_NAME_PARAM, 0)
 
         val recyclerView = findViewById<RecyclerView>(R.id.list_room_windows)
         val adapter = RoomWindowsAdapter(this)
@@ -43,7 +43,7 @@ class RoomActivity : BasicActivity(), OnWindowRoomSelectedListener {
                     withContext(context = Dispatchers.Main) {
                         Toast.makeText(
                             applicationContext,
-                            "Error on windows loading $it",
+                            "Error on room windows loading $it",
                             Toast.LENGTH_LONG
                         ).show()
                     }
