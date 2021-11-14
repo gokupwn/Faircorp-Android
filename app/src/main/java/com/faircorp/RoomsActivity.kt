@@ -52,7 +52,7 @@ class RoomsActivity : BasicActivity(), OnRoomSelectedListener {
 
     override fun onRoomSelected(id: Long) {
         val intent = Intent(this, RoomActivity::class.java).apply {
-            putExtra(ROOM_NAME_PARAM, id.toString())
+            putExtra(ROOM_NAME_PARAM, id)
         }
         startActivity(intent)
     }

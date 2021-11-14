@@ -72,8 +72,6 @@ class WindowActivity : BasicActivity() {
     fun switchStatus(view: View) {
         lifecycleScope.launch(context = Dispatchers.IO) {
             runCatching { ApiServices().windowsApiService.switchStatus(id).execute() }
-//            finish()
-//            startActivity(intent)
         }
     }
 }
