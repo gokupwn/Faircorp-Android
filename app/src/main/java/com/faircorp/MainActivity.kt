@@ -40,7 +40,7 @@ class MainActivity : BasicActivity(), OnClickListener {
     override fun onClick(view: View?) {
         when(view?.id){
             R.id.buildings -> startActivity(
-                Intent(this, WindowsActivity::class.java)
+                Intent(this, BuildingsActivity::class.java)
             )
 
             R.id.rooms -> startActivity(

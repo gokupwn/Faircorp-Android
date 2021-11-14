@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Faircorp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".BuildingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".BuildingActivity"
             android:exported="false" />
         <activity
