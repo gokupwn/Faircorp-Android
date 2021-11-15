@@ -8,3 +8,8 @@
 ##### Rooms --> Windows --> Window
 #### Windows --> Window
 #### Heaters --> Heater
+
+## Libraries Used:
+```text
+retrofit2: to get data from RESTFUL API
+```
