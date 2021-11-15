@@ -1,27 +1,34 @@
 # Faircorp-Android
 ## The UI/UX Flaw:
 ### Dashboard:
-![alt dashboard](/photos/1-1.jpg)
+<img src="/Photos/1-1.jpg"  width="500" height="500"/>
 
 #### Buildings --> Rooms --> Room --> Windows --> Window --> Window:
-![alt dashboard](/photos/Buildings.jpg)
+<img src="/Photos/Buildings.jpg" width="500" height="500"/>
 
 
 #### Rooms:
-![alt dashboard](/photos/1-room-1.jpg)
+<img src="/Photos/1-room-1.jpg" width="500" height="500"/>
 
-##### Rooms --> Windows
-![alt dashboard](/photos/1-room-2.jpg)
 
-###### Rooms --> Windows --> Window
-![alt dashboard](/photos/1-room-3.jpg)
+##### Rooms --> Windows:
+<img src="/Photos/1-room-2.jpg" width="500" height="500"/>
+
+
+###### Rooms --> Windows --> Window:
+<img src="/Photos/1-room-3.jpg" width="500" height="500"/>
+
 
 #### Windows:
-![alt dashboard](/photos/2-windows-1.jpg)
-##### Windows --> window
-![alt dashboard](/photos/2-windows-1.jpg)
+<img src="/Photos/2-windows-1.jpg" width="500" height="500"/>
+
+##### Windows --> window:
+<img src="/Photos/2-windows-1.jpg" width="500" height="500"/>
+
 
 #### Heaters:
-![alt dashboard](/photos/3-heaters-1.jpg)
+<img src="/Photos/3-heaters-1.jpg" width="500" height="500"/>
+
+
 ##### Heater:
-![alt dashboard](/photos/3-heaters-2.jpg)
+<img src="/Photos/3-heaters-2.jpg" width="500" height="500"/>
