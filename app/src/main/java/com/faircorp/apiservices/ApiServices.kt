@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 class ApiServices {
-    private val baseUrl = "http://2344-193-49-174-63.ngrok.io"
+    private val baseUrl = "https://faircorp-hassan-alachek.cleverapps.io"
     val windowsApiService : WindowApiService by lazy {
         Retrofit.Builder()
             .addConverterFactory(MoshiConverterFactory.create())
